@@ -1,0 +1,7 @@
+<section class="top-hero" [ngStyle]="{backgroundImage: bgImage}">
+  <div class="top-hero__container">
+    <h1 class="top-hero__title">{{title}}</h1>
+    <p class="top-hero__subtitle">{{subtitle}}</p>
+    <button *ngIf="button" (click)="onButtonClick(button.url)" class="top-hero__button">{{button.text}}</button>
+  </div>
+</section>

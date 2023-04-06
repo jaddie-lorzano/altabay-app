@@ -1,0 +1,49 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" opened>
+    <mat-toolbar class="mat-theme-indigo">
+      <div class="mat-toolbar-tools">
+        <img src="logo.png" alt="Company Logo">
+        <span flex></span>
+        <button mat-icon-button aria-label="Sign out">
+          <mat-icon>exit_to_app</mat-icon>
+        </button>
+      </div>
+    </mat-toolbar>
+    <mat-nav-list>
+      <mat-list-item *ngFor="let item of menuItems">
+        <mat-icon>{{item.icon}}</mat-icon>
+        <a matLine>{{item.name}}</a>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{cards[0].title}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div *ngFor="let item in cards[0].items">
+        <p>{{item}}</p>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{cards[1].title}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div *ngFor="let item in cards[1].items">
+        <p>{{item}}</p>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{cards[2].title}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div *ngFor="let item in cards[2].items">
+        <p>{{item.name}}</p>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</mat-sidenav-container>

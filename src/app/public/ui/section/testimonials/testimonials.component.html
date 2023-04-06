@@ -1,0 +1,16 @@
+<section [id]="id" class="testimonials">
+  <h2 class="testimonials--header">{{ header | uppercase }}</h2>
+  <div class="testimonials--container" [ngClass]="{ 'active': currentIndex === i }" *ngFor="let testimonial of testimonials; let i = index">
+    <p class="testimonials--message">
+      {{'“' + testimonial.message + '”'}}
+    </p>
+    <div class="testimonials--author">
+      <p class="testimonials--author">
+        {{ testimonial.name }}
+      </p>
+      <p class="testimonials--affiliation">
+        {{ testimonial.affiliation }}
+      </p>
+    </div>
+  </div>
+</section>

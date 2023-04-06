@@ -1,0 +1,7 @@
+<section [id]="id" class="services">
+  <h2>{{ header }}</h2>
+  <h3 *ngIf="title">{{ title }}</h3>
+  <div class="card-container">
+    <card-logo-with-text-and-button [card]="card" *ngFor="let card of cards"></card-logo-with-text-and-button>
+  </div>
+</section>

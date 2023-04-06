@@ -1,0 +1,28 @@
+@use 'src/assets/styles/variables';
+:host {
+  h2 {
+    @include variables.font_6;
+    color: variables.$primary;
+    font-weight: 600;
+    text-align: center;
+    margin-top: auto;
+  }
+  h3 {
+    @include variables.font_4;
+    color: variables.$text-color-2;
+    text-align: center;
+  }
+  .services {
+    display: flex;
+    flex-direction: column;
+    background-color: variables.$white;
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      flex-grow: 0;
+      justify-content: space-around;
+      padding: 48px;
+      margin-bottom: auto;
+    }
+  }
+}
