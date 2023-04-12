@@ -5,7 +5,7 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () =>
-      import('./public/shell/public.module').then((m) => m.PublicModule),
+      import('./public/shell/public-shell-routing'),
   },
   // {
   //   path: 'clients',

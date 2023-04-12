@@ -1,7 +1,6 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Route } from '@angular/router';
 
-const routes: Routes = [
+export default [
   {
     path: '',
     loadComponent: () =>
@@ -23,10 +22,4 @@ const routes: Routes = [
   //       (m) => m.ClientSurveyPageModule
   //     ),
   // },
-];
-
-@NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
-})
-export class PublicRoutingModule {}
+] as Route[];
