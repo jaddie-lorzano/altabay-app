@@ -1,7 +1,7 @@
 import {
   AboutContent, ContactContent, DataSectionContent,
   ServicesContent, TestimonialsContent, TopHeroContent
-} from "../models/section.content.model";
+} from "./section.content.model";
 export interface LandingPage {
   topHero: TopHeroContent,
   services: ServicesContent,

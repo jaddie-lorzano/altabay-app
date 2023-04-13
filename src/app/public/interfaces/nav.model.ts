@@ -1,4 +1,4 @@
-import { Link } from './link.model';
+import { Link } from './../../shared/interfaces/link.model';
 export interface Navigation {
   menu: NavLink[];
   viewSlots?: Link;

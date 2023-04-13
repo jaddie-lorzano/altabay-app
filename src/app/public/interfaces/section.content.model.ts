@@ -1,7 +1,6 @@
 import { LogoTextAndButtonCard, TestimonialCard } from './card.model';
 import { NumberData } from './data.model';
-import { Link, SocialMediaLink } from './link.model'
-import { TextWithImageComponent } from '../components/sections/text-with-image/text-with-image.component';
+import { Link, SocialMediaLink } from './../../shared/interfaces/link.model';
 
 export interface TopHeroContent {
   id: string;

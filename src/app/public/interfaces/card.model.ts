@@ -1,4 +1,4 @@
-import { Link } from './link.model';
+import { Link } from './../../shared/interfaces/link.model';
 export interface LogoTextAndButtonCard {
   logo: string;
   title: string;
