@@ -1,1 +1,19 @@
-<p>nav-bar works!</p>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,0,200" />
+<nav class="nav">
+  <img *ngIf="logoUrl" class="nav__logo--image" [src]="logoUrl">
+  <ul class="nav__list">
+    <ng-container *ngFor="let menu of navMenu"
+    >
+      <li class="nav__item" *ngIf="!menu.hide">
+        <a class="nav__link" [href]="menu.url">{{menu.text}}</a>
+      </li>
+    </ng-container>
+  </ul>
+</nav>
+
+<button class="nav__button" (click)="onButtonClick(link?.url)" (mouseover)="showSpan = true" (mouseleave)="showSpan = false">
+  <span class="nav__button--text" *ngIf="showSpan">{{ link?.text }}</span>
+  <span class="material-symbols-outlined nav__button--logo">
+    calendar_month
+  </span>
+</button>

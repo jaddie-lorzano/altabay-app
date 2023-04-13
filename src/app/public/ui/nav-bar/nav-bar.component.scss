@@ -1,0 +1,114 @@
+@use 'src/assets/styles/variables';
+
+:host {
+  position: fixed;
+  width: 100vw;
+  z-index: 10;
+  .nav {
+    height: 3.5rem;
+    background-color: variables.$white;
+    padding: 0 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* From https://css.glass */
+    background: rgba(254, 253, 254, 0.85);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.01);
+    backdrop-filter: blur(12.4px);
+    -webkit-backdrop-filter: blur(12.4px);
+    &__logo--image {
+      height: 1.75rem;
+      width: auto;
+      margin: auto 2rem;
+    }
+    &__list {
+      height: 100%;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap:6px;
+      margin: 0 48px 0 auto;
+    }
+
+    &__item {
+      height: min-content;
+      width: fit-content;
+      padding: 0 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    &__link {
+      text-decoration: none;
+      @include variables.font_7;
+
+      &:hover {
+        color: variables.$nav-link-hovered;
+      }
+    }
+
+    &__button {
+      position: fixed;
+      padding: 0.5rem;
+      height: 3rem;
+      width: auto;
+      min-width: 3rem;
+      z-index: 99;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 99;
+      background-color: variables.$primary;
+      color: white;
+      transition: width 1s;
+      &:hover {
+        &--text {
+          display: block;
+        }
+      }
+      @media screen and (max-width: 768px) {
+      }
+      &--text {
+        display: none;
+        margin: auto 0.5rem;
+      }
+      &--logo {
+      }
+    }
+    @media screen and (max-width: 768px) {
+      flex-wrap: wrap;
+      height: min-content;
+      padding: 0 1rem;
+      overflow: hidden;
+      height: 4.5rem;
+      transition: transform 2s ease-in-out;
+      justify-content: center;
+
+      &:hover {
+        height: fit-content;
+        gap: 0.25rem;
+      }
+      &::ng-deep {
+        .nav__link {
+          font-size: 1.5rem;
+        }
+      }
+      &__list {
+        flex-grow: 1;
+        flex-basis: 100%;
+        flex-wrap: wrap;
+        margin: 0;
+        gap: 2px;
+        padding-bottom: 12px;
+        * {
+          padding: 5px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
