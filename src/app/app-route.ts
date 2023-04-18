@@ -1,6 +1,4 @@
 import { Route } from '@angular/router';
-import { PublicShellComponent } from './public/shell/public-shell.component';
-import { AuthShellComponent } from './auth/shell/auth-shell/auth-shell.component';
 
 export default [
   {
@@ -11,8 +9,20 @@ export default [
   },
   {
     path: 'auth',
-    loadComponent: () => import('./auth/shell/auth-shell/auth-shell.component')
+    loadComponent: () => import('./auth/shell/auth-shell.component')
     .then(c => c.AuthShellComponent),
+    loadChildren: () => import('./auth/shell/auth-shell.route')
+  },
+  {
+    path: 'admin',
+    loadComponent: () => import('./admin/shell/admin-shell.component')
+    .then(c => c.AdminShellComponent),
+    loadChildren: () => import('./admin/shell/admin-shell.route')
+  },
+  {
+    path: '**',
+    redirectTo: '',
+    pathMatch: 'fullpath'
   },
   // {
   //   path: 'clients',
