@@ -1,3 +1,5 @@
-<app-nav-bar></app-nav-bar>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<app-nav-bar [content]="nav"></app-nav-bar>
+<main>
+  <router-outlet></router-outlet>
+</main>
+<app-footer [content]="footer"></app-footer>

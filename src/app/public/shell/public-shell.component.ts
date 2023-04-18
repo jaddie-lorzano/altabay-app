@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NavBarComponent } from "../ui/nav-bar/nav-bar.component";
 import { FooterComponent } from "../ui/footer/footer.component";
 import { RouterModule } from '@angular/router';
+import { ContentService } from 'src/app/shared/data-access/content.service';
 
 @Component({
     selector: 'app-public-shell',
@@ -18,4 +19,9 @@ import { RouterModule } from '@angular/router';
 })
 export class PublicShellComponent {
 
+  constructor (
+    private content: ContentService,
+  ) {}
+  public footer: string = '© 2023 by Altabay Solutions.';
+  public nav = this.content.navigationContent
 }
