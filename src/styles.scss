@@ -11,14 +11,17 @@
 }
 
 html {
-  width: 100vw;
   scroll-behavior: smooth;
 }
 
 body {
-  width: 100%;
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
+}
+
+html, body {
+  width: 100vw;
+  min-height: 100vh;
 }
 
 section {
@@ -75,3 +78,5 @@ button {
 .yellow {
   background-color: #fffb0033;
 }
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
