@@ -1,0 +1,81 @@
+@use 'src/assets/styles/variables';
+:host {
+  .data {
+    min-height: min-content;
+    background-position: left center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    &__title {
+      @include variables.font_4;
+      color: variables.$white-smoke;
+      @media screen and (max-width: 768px) {
+        font-size: 1.5rem;
+        text-align: center;
+        align-self: center;
+      }
+    }
+    &__container {
+      background: linear-gradient(90deg, rgba(204,187,238,0.2) 15%, rgba(94,23,235,0.5) 50%, rgba(94,23,235,1) 85%);
+      margin: auto 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 120px;
+      gap: 8px;
+      & > * {
+        width: clamp(240px, 100%, 480px);
+        align-self:flex-end;
+      }
+      @media screen and (max-width: 768px) {
+        padding: 24px;
+        background: linear-gradient(90deg, rgba(204,187,238,0.7) 0%, rgba(94,23,235,0.8) 40%, rgba(94,23,235,1) 85%);
+        align-items: center;
+        & > * {
+          align-self:center;
+        }
+      }
+    }
+    &__section-numbers {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 5px;
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        align-self: center;
+      }
+      &--card {
+        width: 150px;
+        text-align: center;
+        height: 100%;
+        flex: 0 1 calc(100% - 300px);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+      }
+      &--value {
+        @include variables.font_2;
+        color: variables.$white-smoke;
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      &--text {
+        @include variables.font_8;
+        font-size: 12px;
+        letter-spacing: normal;
+        color: variables.$white-smoke;
+        flex-grow: 1;
+        max-width: 150px;
+        align-self: center;
+      }
+    }
+
+  }
+}
