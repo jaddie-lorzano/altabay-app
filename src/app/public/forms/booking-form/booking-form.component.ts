@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @Component({
@@ -12,7 +13,8 @@ import { MatDividerModule } from '@angular/material/divider';
     CommonModule,
     MatSidenavModule,
     MatCardModule,
-    MatDividerModule
+    MatDividerModule,
+    MatButtonModule
   ],
   templateUrl: './booking-form.component.html',
   styleUrls: ['./booking-form.component.scss']
